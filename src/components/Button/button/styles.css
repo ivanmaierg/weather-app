@@ -1,0 +1,38 @@
+.button {
+  border: none;
+  color: var(--light--color);
+  font-weight: var(--font-weight--medium);
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.purple {
+  background-color: var(--palatine--color);
+}
+
+.gray {
+  background-color: var(--gray--color);
+}
+
+.large {
+  width: 10.0625rem;
+  height: 2.5rem;
+}
+
+.medium {
+  width: 10.0625rem;
+  height: 3rem;
+}
+
+.font-md {
+  font-weight: var(--font-weight--medium);
+}
+
+.font-xl {
+  font-weight: var(--font-weight--semibold);
+}
+
+.rounded {
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+}
