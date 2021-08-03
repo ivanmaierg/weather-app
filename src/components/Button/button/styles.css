@@ -1,5 +1,4 @@
 .button {
-  border: none;
   color: var(--light--color);
   font-weight: var(--font-weight--medium);
   box-shadow: 0px 4px 4px 0px #00000040;

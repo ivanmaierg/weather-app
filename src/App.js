@@ -1,12 +1,13 @@
 import React from 'react';
 import './style.css';
 
-import Button from './components/button/Button';
-
+import CallToAction from './components/Button/CallToAction';
+import GeoButton from './components/Button/GeoButton';
 export default function App() {
   return (
     <div class="app">
-      <Button>Search for places</Button>
+      <CallToAction />
+      <GeoButton>
     </div>
   );
 }

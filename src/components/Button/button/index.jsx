@@ -8,7 +8,10 @@ class Button extends React.Component {
   }
   render() {
     return (
-      <button className={`button ${this.props.bgColor} ${this.props.size}`}>
+      <button
+        className={`button ${this.props.bgColor} ${this.props.size}`}
+        {...this.props}
+      >
         {this.props.children}
       </button>
     );
@@ -17,7 +20,7 @@ class Button extends React.Component {
 
 Button.propTypes = {
   bgColor: PropTypes.oneOf(['purple', 'gray']),
-  size: PropTypes.number
+  size: PropTypes.oneOf(['medium', 'large'])
 };
 Button.defaultProps = {
   bgColor: 'gray',
