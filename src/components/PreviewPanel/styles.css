@@ -1,0 +1,25 @@
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary--color);
+}
+
+.left-panel__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 95%;
+    height: 40px;
+    margin-top: 1rem;
+}
+
+.left-panel__weather {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(2, 376px)
+}
+
+.left-panel__weather--img {
+    border: 1px solid white;
+}

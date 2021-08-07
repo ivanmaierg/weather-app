@@ -3,18 +3,34 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.2.0",
+    "classnames": "^2.3.1",
+    "craco-alias": "^3.0.1",
+    "material-design-icons": "^3.0.1",
     "normalize.css": "8.0.1",
     "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
     "react-scripts": "latest"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

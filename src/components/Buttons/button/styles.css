@@ -1,36 +1,43 @@
 .button {
+  cursor:pointer;
+  border:none;
   color: var(--light--color);
   font-weight: var(--font-weight--medium);
   box-shadow: 0px 4px 4px 0px #00000040;
 }
 
-.purple {
+.button:hover{
+  background-color:rgba(233, 233, 233, 0.625)
+}
+
+
+.button-purple {
   background-color: var(--palatine--color);
 }
 
-.gray {
+.button-gray {
   background-color: var(--gray--color);
 }
 
-.large {
+.button-large {
   width: 10.0625rem;
   height: 2.5rem;
 }
 
-.medium {
+.button-medium {
   width: 10.0625rem;
   height: 3rem;
 }
 
-.font-md {
+.button-font-md {
   font-weight: var(--font-weight--medium);
 }
 
-.font-xl {
+.button-font-xl {
   font-weight: var(--font-weight--semibold);
 }
 
-.rounded {
+.button-rounded {
   border-radius: 50%;
   height: 2.5rem;
   width: 2.5rem;
