@@ -1,5 +1,7 @@
 import React from 'react'
-import './styles';
+import DayWeather from '../DayWeatherCard';
+import './styles.css';
+
 const WeekWeather = () => {
     return (
             <section className="WeekWeather">

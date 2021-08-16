@@ -1,5 +1,5 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600;700&display=swap');
 :root {
     --main-bg-color: #100e1d;
     --primary--color: #1e213a;
@@ -10,6 +10,7 @@
     --font--primary: 'Raleway', sans-serif;
     --font-weight--medium: 500;
     --font-weight--semibold: 600;
+    --font-weight--bold: 700;
 }
 
 * {
@@ -18,8 +19,8 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family:var(--font--primary);
-    background-color:var(--main-bg-color);
-    color:var(--light--color);
+body {
+    font-family: var(--font--primary);
+    background-color: var(--main-bg-color);
+    color: var(--light--color);
 }

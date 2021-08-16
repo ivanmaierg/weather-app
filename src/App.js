@@ -10,7 +10,7 @@ export default function App() {
   return (
     <div className="app">
       <PreviewPanel />
-      <Main></Main>
+      <Main />
     </div>
   );
 }

@@ -1,21 +1,13 @@
 import React from 'react'
-import DayWeather from '../DayWeatherCard'
+import WeatherHighlights from '../WeatherHighlights'
+import WeekWeather from '../WeekWeather'
 import './styles.css'
 const Main = () => {
     return (
         <main>
-            <section className="WeekWeather">
-                <DayWeather/>
-                <DayWeather />
-                <DayWeather />
-                <DayWeather />
-                <DayWeather />
-                <DayWeather />
-                <DayWeather />
-            </section>
-            <section>
-                <h1>Today's Hightlights</h1>
-            </section>
+            <WeekWeather />
+            <WeatherHighlights />
+            <footer><p>created by <strong>getsuga743</strong> - devChallenges.io</p></footer>
         </main>
     )
 }

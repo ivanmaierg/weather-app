@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 import CallToAction from '@components/Buttons/CallToAction';
 import GeoButton from '@components/Buttons/GeoButton';
@@ -6,12 +6,14 @@ import weatherImg from '@icons/weatherImg.png';
 import './styles.css'
 import { getLocation } from '@/services/GetWeather';
 import LocationIcon from '@icons/location-icon-gray.svg'
+import SearchPanel from '../SearchPanel';
 const AsidePanel = (props) => {
-    getLocation('london')
-    return (
-        <aside className="left-panel">
+    const [toggle, setToggle] = useState(false);
+    console.log(toggle)
+    return (!toggle ? <SearchPanel toggle={toggle} setToggle={setToggle} /> :
+        <aside style={toggle ? { display: 'flex' } : { display: 'none' }} className="left-panel">
             <div className="left-panel__buttons">
-                <CallToAction />
+                <CallToAction toggle={toggle} setToggle={setToggle} />
                 <GeoButton />
             </div>
             <div className="left-panel__weather">
@@ -28,8 +30,7 @@ const AsidePanel = (props) => {
 
                 </div>
             </div>
-        </aside >
-    )
+        </aside >)
 }
 
 export default AsidePanel

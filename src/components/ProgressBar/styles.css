@@ -1,0 +1,49 @@
+.progressBar__container {
+    position: relative;
+    margin: 1rem;
+}
+
+.progressBar {
+    display: block;
+    background-color: var(--light--color);
+    height: 8px;
+    width: 229px;
+    border-radius: 80px;
+    overflow: hidden;
+}
+
+.progressBar__container > span {
+    font-weight: var( --font-weight--bold);
+    font-size: 0.8rem;
+    color:var(--gray--color);
+}
+
+.start {
+    position: absolute;
+    top: -1.2rem;
+    left: 0;
+}
+
+.middle {
+    position: absolute;
+    top: -1.2rem;
+    right: 50%;
+}
+
+.end {
+    position: absolute;
+    top: -1.2rem;
+    right: 0;
+}
+
+.sign{
+    position: absolute;
+    right: 0;
+    bottom:-1.2rem;
+}
+
+.progressBar__content {
+    display: block;
+    background-color: #FFEC65;
+    height: 100%;
+}

@@ -1,5 +1,4 @@
 .left-panel {
-    display: flex;
     flex-direction: column;
     background-color: var(--primary--color);
     background-image: url('../../assets/images/clouds.png');
