@@ -1,0 +1,7 @@
+.WeekWeather{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-gap:1.5rem;
+    justify-items: center;
+    margin:3.25rem 3.4375rem;
+}

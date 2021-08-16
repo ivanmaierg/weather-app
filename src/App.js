@@ -3,13 +3,14 @@ import './style.css';
 
 import CallToAction from './components/Buttons/CallToAction';
 import GeoButton from './components/Buttons/GeoButton';
-import PreviewPanel from './components/PreviewPanel';
+import PreviewPanel from './components/AsidePanel';
+import Main from './components/Main';
+
 export default function App() {
   return (
     <div className="app">
-      <main>
-        <PreviewPanel />
-      </main>
+      <PreviewPanel />
+      <Main></Main>
     </div>
   );
 }

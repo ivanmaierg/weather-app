@@ -6,13 +6,20 @@
     --light--color: #e7e7eb;
     --gray--color: #6e707a;
     --palatine--color: #3c47e9;
-    --comet--color: #585676;
+    --comet--color: #A09FB1;
     --font--primary: 'Raleway', sans-serif;
     --font-weight--medium: 500;
     --font-weight--semibold: 600;
 }
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:var(--font--primary);
+    background-color:var(--main-bg-color);
+    color:var(--light--color);
 }

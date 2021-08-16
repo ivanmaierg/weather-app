@@ -13,7 +13,7 @@ const GeoButton = (props) => {
   }
   return (
       <Button size="rounded" bgColor="gray" onClick={handleClick}>
-        <img src={MyLocation}></img>
+        <img style={{'margin':'auto'}}  src={MyLocation}></img>
       </Button>
     );
 

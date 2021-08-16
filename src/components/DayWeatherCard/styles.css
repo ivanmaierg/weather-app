@@ -1,0 +1,39 @@
+.DayWeather__container {
+    display: flex;
+    flex-direction: column;
+    width: 7.5rem;
+    height: 11.0625rem;
+    background-color: var(--primary--color)
+}
+
+.DayWeather h1 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.DayWeather span {
+    width: 3.5275rem;
+    margin: auto;
+}
+
+.DayWeather span img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.DayWeather__temperatures {
+    font-size: 1rem;
+    line-height: 19px;
+    font-weight: var(--font-weight--semibold);
+    margin: auto;
+    margin-bottom:18px;
+}
+
+.DayWeather__temperatures .temperatures--max {
+    align-self: left;
+    margin-right: 1rem;
+}
+
+.DayWeather__temperatures .temperatures--min {
+    align-self: right;
+}

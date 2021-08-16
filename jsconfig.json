@@ -12,4 +12,4 @@
         "@services/*": ["src/services/*"]
         }
     }
-    }
+}

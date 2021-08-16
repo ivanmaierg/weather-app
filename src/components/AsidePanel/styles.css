@@ -1,0 +1,103 @@
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary--color);
+    background-image: url('../../assets/images/clouds.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 2rem;
+    background-size: auto;
+}
+
+.left-panel__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 95%;
+    height: 40px;
+    margin-top: 1rem;
+}
+
+.left-panel__weather {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(2, 376px)
+}
+
+.left-panel__weather--img {
+    display: flex;
+    width: 9.375rem;
+    height: 100%;
+    margin: auto;
+}
+
+.left-panel__weather--img img {
+    display: block;
+    margin: auto;
+    max-width: 12.625rem;
+    max-height: 14.625rem;
+}
+
+.left-panel__weather--info {
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.weather--temperature {
+    text-align: center;
+    font-weight: 600;
+    font-size: 9rem;
+    line-height: auto;
+}
+
+.weather--temperature span {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--comet--color);
+}
+
+.weather--data {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.weather--data p {
+    margin-top: 2rem;
+    color: var(--comet--color)
+}
+
+.weather--status {
+    font-size: 2.25rem;
+    font-weight: var(--font-weight--semibold);
+    line-height: 2.64125rem;
+}
+
+.weather--data {
+    font-size: 1.1rem;
+    font-weight: var(--font-weight--medium);
+    word-spacing: 0.5rem;
+}
+
+.weather--location {
+    font-weight: 600;
+    line-height: 1.2rem;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.weather--location span {
+    width: 100%;
+}
+
+.weather--location span img {
+    object-fit: cover;
+}
