@@ -7,7 +7,7 @@
     background-position-x: center;
     background-position-y: 2rem;
     background-size: auto;
-    padding-top: 2.5rem;
+    padding: 2.625rem 1rem;
 }
 
 .left-panel__buttons {
@@ -27,7 +27,7 @@
 
 .left-panel__weather--img {
     display: flex;
-    width: 9.375rem;
+    width: auto;
     height: 100%;
     margin: auto;
 }
@@ -37,6 +37,7 @@
     margin: auto;
     max-width: 12.625rem;
     max-height: 14.625rem;
+    width:100%;
 }
 
 .left-panel__weather--info {
@@ -106,6 +107,8 @@
     .left-panel {
         display: flex;
         flex-direction: column;
-        width:35vw;
+        max-width: 28rem;
+        width: 33%;
+        height: 100vh;
     }
 }

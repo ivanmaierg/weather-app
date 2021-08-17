@@ -1,9 +1,11 @@
 .DayWeather__container {
     display: flex;
     flex-direction: column;
-    width: 7.5rem;
+    width: 100%;
+    min-width: 7.5rem;
     height: 11.0625rem;
-    background-color: var(--primary--color)
+    background-color: var(--primary--color);
+
 }
 
 .DayWeather h1 {

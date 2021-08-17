@@ -1,0 +1,23 @@
+.WeekWeather {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    justify-items: center;
+    margin: 3.25rem;
+    width: auto;
+}
+
+@media (max-width:340px) {
+    .WeekWeather {
+        margin:1rem 2rem;
+    }
+}
+
+@media (min-width:1200px) {
+    .WeekWeather {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+}

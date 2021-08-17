@@ -1,47 +1,51 @@
 .button {
-  cursor:pointer;
-  border:none;
-  color: var(--light--color);
-  font-weight: var(--font-weight--medium);
-  box-shadow: 0px 4px 4px 0px #00000040;
+    cursor: pointer;
+    border: none;
+    color: var(--light--color);
+    font-weight: var(--font-weight--medium);
+    box-shadow: 0px 4px 4px 0px #00000040;
 }
 
-.button:hover{
-  background-color:rgba(233, 233, 233, 0.625)
+.button:hover {
+    background-color: rgba(233, 233, 233, 0.625)
 }
-
 
 .button-purple {
-  background-color: var(--palatine--color);
+    background-color: var(--palatine--color);
 }
 
 .button-gray {
-  background-color: var(--gray--color);
+    background-color: var(--gray--color);
 }
+
 .button-small {
-  padding:14px 16px;
+    padding: 14px 16px;
 }
 
 .button-large {
-  width: 10.0625rem;
-  height: 2.5rem;
+    width: 10.0625rem;
+    height: 2.5rem;
 }
 
 .button-medium {
-  width: 10.0625rem;
-  height: 3rem;
+    width: 10.0625rem;
+    height: 3rem;
 }
 
 .button-font-md {
-  font-weight: var(--font-weight--medium);
+    font-weight: var(--font-weight--medium);
 }
 
 .button-font-xl {
-  font-weight: var(--font-weight--semibold);
+    font-weight: var(--font-weight--semibold);
 }
 
 .button-rounded {
-  border-radius: 50%;
-  height: 2.5rem;
-  width: 2.5rem;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.button-font-xxl {
+    font-weight: var(--font-weight--bold);
 }

@@ -9,6 +9,7 @@ const Button = (props) =>  {
       <button
         className={buttonClassNames}
         onClick={props.onClick}
+        style={props?.style}
       >
         {props.children}
       </button>
@@ -17,7 +18,7 @@ const Button = (props) =>  {
 Button.propTypes = {
   bgColor: PropTypes.oneOf(['purple', 'gray']),
   size: PropTypes.oneOf(['small','medium', 'large','rounded']),
-  fontSize:PropTypes.oneOf(['md','xl'])
+  fontSize:PropTypes.oneOf(['md','xl','xxl'])
 };
 Button.defaultProps = {
   bgColor: 'gray',

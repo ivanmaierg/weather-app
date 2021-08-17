@@ -10,8 +10,6 @@ const WeekWeather = () => {
                 <DayWeather />
                 <DayWeather />
                 <DayWeather />
-                <DayWeather />
-                <DayWeather />
             </section>
     )
 }

@@ -3,11 +3,11 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 2rem auto;
+    margin: 2rem;
     background-color: var(--primary--color);
-    max-width: 20.5rem;
+    width: 100%;
     max-height: 12.75rem;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .WeatherHighlight__container>h3 {
@@ -28,7 +28,10 @@
 }
 
 @media (min-width:1200px) {
-    .WeatherHighlight__container{
-        margin:2rem;
+    .WeatherHighlight__container {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
     }
 }
+

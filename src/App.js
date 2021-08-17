@@ -9,8 +9,9 @@ import Main from './components/Main';
 export default function App() {
   return (
     <div className="app">
-      <PreviewPanel />
-      <Main />
+        <PreviewPanel />
+        <Main />
+        
     </div>
   );
 }

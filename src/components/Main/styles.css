@@ -1,32 +1,40 @@
-.WeekWeather {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.5rem;
-    justify-items: center;
-    margin: 3.25rem 3.4375rem;
+.temperature-buttons {
+    display: none;
 }
 
 footer {
     display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    margin: auto;
 }
 
 footer>p {
-    margin: auto;
     font-weight: var(--font-weight--medium);
     font-size: 0.9rem;
+    margin-bottom: 1rem;
 }
 
 @media (min-width:1200px) {
     main {
-        width: 100%;
-    }
-    .WeekWeather {
         display: flex;
         justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        flex-direction: row;
-        width: auto;
-
+        margin: 2.625rem auto;
+        width: 66%;
+    }
+    .temperature-buttons {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 3rem;
+    }
+    main>div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 44rem;
+    }
+    footer>p {
+        margin:0;
     }
 }
