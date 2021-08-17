@@ -3,14 +3,10 @@ import './styles.css';
 import PropTypes from 'prop-types';
 import Button from '@components/Buttons/button';
 
-const CallToAction = ({ toggle, setToggle }) => {
+const CallToAction = ({ visible, showSearchPanel }) => {
 
-
-  const handleClick = () => {
-    setToggle(prevState => (!toggle));
-  }
   return (
-    <Button size="large" bgColor="gray" onClick={handleClick}>
+    <Button size="large" bgColor="gray" onClick={() => showSearchPanel(!visible)}>
       Search for Places
     </Button>
   );

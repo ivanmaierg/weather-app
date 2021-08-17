@@ -1,4 +1,5 @@
 .left-panel {
+    top: -10px;
     flex-direction: column;
     background-color: var(--primary--color);
     background-image: url('../../assets/images/clouds.png');
@@ -6,22 +7,22 @@
     background-position-x: center;
     background-position-y: 2rem;
     background-size: auto;
+    padding-top: 2.5rem;
 }
 
 .left-panel__buttons {
     display: flex;
     justify-content: space-between;
-    margin: auto;
     width: 95%;
     height: 40px;
-    margin-top: 1rem;
+    margin: 0 auto;
 }
 
 .left-panel__weather {
     position: relative;
     display: grid;
     grid-template-columns: 1;
-    grid-template-rows: repeat(2, 376px)
+    grid-template-rows: repeat(2, 376px);
 }
 
 .left-panel__weather--img {
@@ -99,4 +100,12 @@
 
 .weather--location span img {
     object-fit: cover;
+}
+
+@media (min-width:1200px) {
+    .left-panel {
+        display: flex;
+        flex-direction: column;
+        width:35vw;
+    }
 }

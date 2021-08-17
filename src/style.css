@@ -24,3 +24,11 @@ body {
     background-color: var(--main-bg-color);
     color: var(--light--color);
 }
+
+@media (min-width:1200px) {
+    .app {
+        display: flex;
+        flex-direction: row;
+        width:100%;
+    }
+}

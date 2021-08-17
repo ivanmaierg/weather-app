@@ -8,12 +8,15 @@ import { getLocation } from '@/services/GetWeather';
 import LocationIcon from '@icons/location-icon-gray.svg'
 import SearchPanel from '../SearchPanel';
 const AsidePanel = (props) => {
-    const [toggle, setToggle] = useState(false);
-    console.log(toggle)
-    return (!toggle ? <SearchPanel toggle={toggle} setToggle={setToggle} /> :
-        <aside style={toggle ? { display: 'flex' } : { display: 'none' }} className="left-panel">
+    const [searchPanel, setSearchPanel] = useState(false);
+    const showSearchPanel = () => {setSearchPanel(!searchPanel)}
+    console.log(searchPanel)
+    return (
+        <>
+        <SearchPanel visible={searchPanel} showSearchPanel={showSearchPanel} />
+        <aside className="left-panel">
             <div className="left-panel__buttons">
-                <CallToAction toggle={toggle} setToggle={setToggle} />
+                <CallToAction visible={searchPanel} showSearchPanel={showSearchPanel} />
                 <GeoButton />
             </div>
             <div className="left-panel__weather">
@@ -30,7 +33,9 @@ const AsidePanel = (props) => {
 
                 </div>
             </div>
-        </aside >)
+        </aside >
+        </>
+        )
 }
 
 export default AsidePanel

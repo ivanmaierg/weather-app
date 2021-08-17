@@ -18,6 +18,9 @@
 .button-gray {
   background-color: var(--gray--color);
 }
+.button-small {
+  padding:14px 16px;
+}
 
 .button-large {
   width: 10.0625rem;

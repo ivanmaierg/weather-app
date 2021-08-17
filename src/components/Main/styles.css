@@ -5,11 +5,28 @@
     justify-items: center;
     margin: 3.25rem 3.4375rem;
 }
-footer{
-    display:flex;
+
+footer {
+    display: flex;
 }
-footer > p {
+
+footer>p {
     margin: auto;
     font-weight: var(--font-weight--medium);
     font-size: 0.9rem;
+}
+
+@media (min-width:1200px) {
+    main {
+        width: 100%;
+    }
+    .WeekWeather {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: auto;
+
+    }
 }
