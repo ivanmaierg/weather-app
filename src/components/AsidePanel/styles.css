@@ -19,7 +19,9 @@
 }
 
 .left-panel__weather {
+    position: relative;
     display: grid;
+    grid-template-columns: 1;
     grid-template-rows: repeat(2, 376px);
 }
 
@@ -41,10 +43,9 @@
 .left-panel__weather--info {
     color: white;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    grid-row: 2/3;
 }
 
 .weather--temperature {
@@ -106,7 +107,6 @@
     .left-panel {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         max-width: 28rem;
         width: 33%;
         height: 100vh;

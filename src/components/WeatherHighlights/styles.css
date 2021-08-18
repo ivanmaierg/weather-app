@@ -11,8 +11,6 @@
     margin: 0 1.4375rem;
 }
 
-
-
 @media (min-width:768px) {
     .Weather-Highlights__container {
         display: grid;
@@ -21,9 +19,17 @@
         grid-template-rows: 12.75rem 9.9375rem;
         grid-gap: 3rem;
         width: auto;
-        margin: 2.25rem;
     }
     .Weather-Highlights__section--title {
         margin: 2rem;
+    }
+}
+
+@media (min-width:1200px) {
+    .Weather-Highlights__container {
+        margin: auto;
+    }
+    .Weather-Highlights__section--title {
+        margin: 2rem auto;
     }
 }

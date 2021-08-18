@@ -25,8 +25,8 @@ const AsidePanel = (props) => {
                 </div>
                 <div className="left-panel__weather--info">
                     <p className="weather--temperature">15<span>°C</span></p>
+                    <p className="weather--status">Shower</p>
                     <div className="weather--data">
-                        <p className="weather--status">Shower</p>
                         <p className="weather--date">Today Fri,13 Aug</p>
                         <p className="weather--location"><span><img src={LocationIcon} /></span> Helsinki</p>
                     </div>
