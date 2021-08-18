@@ -12,10 +12,10 @@
     overflow: hidden;
 }
 
-.progressBar__container > span {
+.progressBar__container>span {
     font-weight: var( --font-weight--bold);
     font-size: 0.8rem;
-    color:var(--gray--color);
+    color: var(--gray--color);
 }
 
 .start {
@@ -36,14 +36,38 @@
     right: 0;
 }
 
-.sign{
+.sign {
     position: absolute;
     right: 0;
-    bottom:-1.2rem;
+    bottom: -1.2rem;
 }
 
-.progressBar__content {
-    display: block;
-    background-color: #FFEC65;
-    height: 100%;
+
+/* background: */
+
+.progressBar__container progress::-webkit-progress-bar {
+    background-color: var(--light--color);
+    width: 100%;
+}
+
+.progressBar__container progress {
+    background-color: var(--light--color);
+    height: 8px;
+    border-radius: 80px;
+    overflow: hidden;
+}
+
+
+/* value: */
+
+.progressBar__container progress::-webkit-progress-value {
+    background-color: #FFEC65!important;
+}
+
+.progressBar__container progress::-moz-progress-bar {
+    background-color: #FFEC65!important;
+}
+
+.progressBar__container progress {
+    color: #FFEC65;
 }

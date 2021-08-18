@@ -7,9 +7,7 @@ const ProgressBar = ({progress}) => {
             <span className="start">0</span>
             <span className="middle">50</span>
             <span className="end">100</span>
-            <div className="progressBar">
-                <div className="progressBar__content" style={{'width':`${progress}`}}></div>
-            </div>
+            <progress value={84} max="100" />
             <span className="sign">%</span>
         </div>
     )
