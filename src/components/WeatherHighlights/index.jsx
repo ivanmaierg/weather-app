@@ -17,7 +17,7 @@ const WeatherHighlights = () => {
                 <WeatherHighlight>
                     <h3>Humidity</h3>
                     <p>84<span>%</span></p>
-                    <ProgressBar progress={'84%'} />
+                    <ProgressBar progress={84} />
                 </WeatherHighlight>
                 <WeatherHighlight>
                     <h3>visibility</h3>

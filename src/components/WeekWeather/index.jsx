@@ -1,15 +1,10 @@
 import React from 'react'
-import DayWeather from '../DayWeatherCard';
 import './styles.css';
 
-const WeekWeather = () => {
+const WeekWeather = ({children}) => {
     return (
             <section className="WeekWeather">
-                <DayWeather />
-                <DayWeather />
-                <DayWeather />
-                <DayWeather />
-                <DayWeather />
+                {children}
             </section>
     )
 }

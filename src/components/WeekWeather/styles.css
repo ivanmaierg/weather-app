@@ -3,13 +3,16 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5rem;
     justify-items: center;
-    margin: 3.25rem;
+    margin: 2.25rem;
     width: auto;
 }
 
 @media (max-width:340px) {
     .WeekWeather {
-        margin:1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+        width:auto;
     }
 }
 
