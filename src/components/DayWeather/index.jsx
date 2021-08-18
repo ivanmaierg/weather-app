@@ -6,7 +6,7 @@ const DayWeather = ({dayWeather}) => {
     return (
         <div className="DayWeather DayWeather__container">
             <h1>{applicable_date}</h1>
-            <span className="Icon__container"><Icon name={weatherStateAbbr} width={'auto'} alt={weatherState}></Icon></span>
+            <span className="Icon__container"><Icon name={weatherStateAbbr} width={'100%'} height={'100%'} alt={weatherState}></Icon></span>
             <p className="DayWeather__temperatures"><span className="temperatures--max">{max_temp}</span><span className="temperatures--min">{min_temp}</span></p>
         </div>
     )

@@ -7,7 +7,7 @@ footer {
     align-items: flex-end;
     justify-content: center;
     height: 100%;
-    margin: auto;
+    margin: 1rem auto auto auto;
 }
 
 footer>p {
@@ -20,7 +20,7 @@ footer>p {
     main {
         display: flex;
         justify-content: center;
-        margin: 2.625rem auto;
+        margin: 2.625rem auto 1rem auto;
         width: 66%;
     }
     .temperature-buttons {
@@ -35,6 +35,6 @@ footer>p {
         max-width: 44rem;
     }
     footer>p {
-        margin:0;
+        margin: 0;
     }
 }

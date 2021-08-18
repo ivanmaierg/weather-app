@@ -49,3 +49,8 @@
 .button-font-xxl {
     font-weight: var(--font-weight--bold);
 }
+
+.button-active{
+    background-color:var(--light--color);
+    color:var(--primary--color);
+}
