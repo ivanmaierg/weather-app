@@ -19,17 +19,18 @@
 }
 
 .left-panel__weather {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: repeat(2, 376px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .left-panel__weather--img {
     display: flex;
     width: auto;
-    height: 100%;
     margin: auto;
+    height: 100%;
 }
 
 .left-panel__weather--img img {
@@ -37,7 +38,7 @@
     margin: auto;
     max-width: 12.625rem;
     max-height: 14.625rem;
-    width:100%;
+    width: 100%;
 }
 
 .left-panel__weather--info {
@@ -46,12 +47,15 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    height: 100%;
+    margin-bottom: 1rem;
 }
 
 .weather--temperature {
     text-align: center;
     font-weight: 600;
     font-size: 9rem;
+    margin-bottom: 2rem;
     line-height: auto;
 }
 
@@ -110,5 +114,17 @@
         max-width: 28rem;
         width: 33%;
         height: 100vh;
+    }
+    .left-panel__weather {
+        max-height: 50rem;
+    }
+}
+
+@media(max-width:1200px) {
+    .left-panel {
+        height: 810px;
+    }
+    .left-panel__weather--info {
+        margin-bottom: 5rem;
     }
 }
