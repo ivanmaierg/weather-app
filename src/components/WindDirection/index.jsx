@@ -1,11 +1,13 @@
 import React from 'react'
 import direction from '@icons/direction.svg'
-import { directions } from './directions'
 
-const WindDirection = ({windDirection}) => {
+import './styles.css'
+const WindDirection = ({ windDirectionName, windDirection }) => {
+
     return (
-        <div>
-            <span><img style={{ transform: `rotate(${directions[windDirection]}deg)` }} src={direction}></img></span>WSW
+        <div className="WindDirection__container">
+            <span style={{ display: 'flex',justifyContent:'center',alignItems:'center', marginRight:'1rem',backgroundColor: 'var(--gray--color)', borderRadius: '50%', width: '25px', height: '25px' }}><img style={{ transform: `rotate(${windDirection}deg)`, width: 'auto', height: '60%',margin:'auto' }} src={direction} alt={windDirectionName}></img></span>
+            <span>{windDirectionName}</span>
         </div>
     )
 }

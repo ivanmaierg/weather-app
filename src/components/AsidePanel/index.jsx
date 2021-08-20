@@ -7,35 +7,39 @@ import './styles.css'
 import { getLocation } from '@/services/GetWeather';
 import LocationIcon from '@icons/location-icon-gray.svg'
 import SearchPanel from '../SearchPanel';
-const AsidePanel = (props) => {
+import Icon from '@components/Icon';
+
+const AsidePanel = ({ preview }) => {
+    const { title, temp, date, weatherState, weatherStateAbbr } = preview;
+
     const [searchPanel, setSearchPanel] = useState(false);
-    const showSearchPanel = () => {setSearchPanel(!searchPanel)}
-    console.log(searchPanel)
+    const showSearchPanel = () => { setSearchPanel(!searchPanel) }
+
     return (
         <>
-        <SearchPanel visible={searchPanel} showSearchPanel={showSearchPanel} />
-        <aside className="left-panel">
-            <div className="left-panel__buttons">
-                <CallToAction visible={searchPanel} showSearchPanel={showSearchPanel} />
-                <GeoButton />
-            </div>
-            <div className="left-panel__weather">
-                <div className="left-panel__weather--img">
-                    <img src={weatherImg}></img>
+            <SearchPanel visible={searchPanel} showSearchPanel={showSearchPanel} />
+            <aside className="left-panel">
+                <div className="left-panel__buttons">
+                    <CallToAction visible={searchPanel} showSearchPanel={showSearchPanel} />
+                    <GeoButton />
                 </div>
-                <div className="left-panel__weather--info">
-                    <p className="weather--temperature">15<span>°C</span></p>
-                    <p className="weather--status">Shower</p>
-                    <div className="weather--data">
-                        <p className="weather--date">Today Fri,13 Aug</p>
-                        <p className="weather--location"><span><img src={LocationIcon} /></span> Helsinki</p>
+                <div className="left-panel__weather">
+                    <div className="left-panel__weather--img">
+                        <Icon name={weatherStateAbbr} width={'75%'} height={'75%'} style={{ margin: 'auto' }} alt={weatherState} />
                     </div>
+                    <div className="left-panel__weather--info">
+                        <p className="weather--temperature">{temp}<span>°C</span></p>
+                        <p className="weather--status">{weatherState}</p>
+                        <div className="weather--data">
+                            <p className="weather--date">Today {date}</p>
+                            <p className="weather--location"><span><img src={LocationIcon} /></span>{title}</p>
+                        </div>
 
+                    </div>
                 </div>
-            </div>
-        </aside >
+            </aside >
         </>
-        )
+    )
 }
 
 export default AsidePanel
