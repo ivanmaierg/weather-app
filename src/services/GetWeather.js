@@ -1,10 +1,10 @@
 
 const getLocation = async (query) => {
-    const url = `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${query}`
+    const url = `http://localhost:8080/https://www.metaweather.com/api/location/search/?query=${query}`
     try {
         const response = await fetch(url);
         const data = await response.json()
-        console.log(data)
+        return data
     } catch (err) {
         throw err
     }
@@ -12,15 +12,25 @@ const getLocation = async (query) => {
 }
 
 const getWeatherWithCoords = async (woeid) => {
-    const url = `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`
+    const url = `http://localhost:8080/https://www.metaweather.com/api/location/${woeid}/`
     try {
         const response = await fetch(url);
         const data = await response.json()
         console.log(data)
+        return data
     } catch (err) {
-        console.log(err)
+        throw err
     }
 }
 
+const getWeather = async (query) => {
+    try {
+        let data = await getLocation(query);
+        let weather = await getWeatherWithCoords(data[0].woeid);
+        return weather;
+    } catch (err) {
+        throw err
+    }
+}
 
-export {getLocation,getWeatherWithCoords };
+export { getLocation, getWeatherWithCoords, getWeather };

@@ -9,7 +9,9 @@
     max-height: 12.75rem;
     padding: 1.5rem;
 }
-
+.WeatherHighlight__container > * {
+    text-align: center;
+}
 .WeatherHighlight__container>h3 {
     font-weight: var(--font-weight--medium);
 }
