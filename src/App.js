@@ -11,6 +11,8 @@ import WeekWeather from '@components/WeekWeather';
 import useFetch from './hooks/useFetch';
 import { getWeather } from './services/GetWeather';
 
+
+
 export default function App() {
   const [weatherInfo, setWeatherInfo] = useState(() => {
     return mockResponse;
