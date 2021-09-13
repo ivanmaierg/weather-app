@@ -1,17 +1,21 @@
-import React from 'react'
-import WeatherHighlight from '@components/WeatherHighlight'
-import WindDirection from '@components/WindDirection'
-import ProgressBar from '@components//ProgressBar'
-import './styles.css'
+import React from 'react';
+import WeatherHighlight from '@components/WeatherHighlight';
+import WindDirection from '@components/WindDirection';
+import ProgressBar from '@components//ProgressBar';
+import './styles.css';
+import { useSelector } from 'react-redux';
 
-const WeatherHighlights = ({ todayHighlights }) => {
+
+const WeatherHighlights = () => {
+    const {todayHighlights} = useSelector(state => state?.weather?.entities);
+    console.log(todayHighlights)
     const { airPressure,
         humidity,
         visibility,
         windDirection,
         windDirectionName,
         windSpeed
-    } = todayHighlights
+    } = todayHighlights;
     return (
         <section className="Weather-Highlights__section">
             <h1 className="Weather-Highlights__section--title">Today's Hightlights</h1>

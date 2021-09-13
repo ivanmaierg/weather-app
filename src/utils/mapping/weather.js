@@ -1,12 +1,12 @@
-import response from '../../utils/resMock.json';
+
 import dayjs from 'dayjs';
 
 
 const weatherMapping = (weather) => {
     const { consolidated_weather, title  } = weather;
     const [today, ...nextDaysWeather] = consolidated_weather;
-    const { wind_direction_compass: windDirectionName, wind_direction: windDirection, wind_speed: windSpeed, humidity, visibility, air_pressure: airPressure } = today
-    const { the_temp: temp, applicable_date: date, weather_state_abbr: weatherStateAbbr, weather_state_name: weatherState } = today
+    const { wind_direction_compass: windDirectionName, wind_direction: windDirection, wind_speed: windSpeed, humidity, visibility, air_pressure: airPressure } = today;
+    const { the_temp: temp, applicable_date: date, weather_state_abbr: weatherStateAbbr, weather_state_name: weatherState } = today;
 
     const preview = {
         title,

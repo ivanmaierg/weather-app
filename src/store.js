@@ -1,27 +1,16 @@
-import { createStore , combineReducers, applyMiddleware, compose } from 'redux';
-// import locationActions  from './actions/locationActions';
-import weatherActions from './actions/weatherActions.js';
+import { configureStore ,combineReducers} from '@reduxjs/toolkit'
+import { weatherSlice } from './reducers/weatherReducer'
+import { locationSlice } from './reducers/locationReducer';
+import thunk from 'redux-thunk';
 
 
+const rootReducer = combineReducers({weather:weatherSlice.reducer,location:locationSlice.reducer});
+const store = configureStore({
+    reducer: rootReducer,
+    middleware: [thunk],
+})
 
-
-
-const composeEnhancers = (typeof window !== 'undefined'
-    && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__)
-  || compose;
-
-
-
-function weatherReducer(state = {}, action){
-    switch(action.type){
-        case weatherActions.GET_WEATHER:
-            return { weather:action.payload }
-        default:
-            return state
-    }
-};
-
-
-const store = createStore(weatherReducer,[]);
-
-export default store;
+store.subscribe(() => {
+    localStorage.setItem('reduxState', JSON.stringify(store.getState()))
+})
+export default store

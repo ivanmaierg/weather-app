@@ -8,12 +8,14 @@ import { getLocation } from '@/services/GetWeather';
 import LocationIcon from '@icons/location-icon-gray.svg'
 import SearchPanel from '../SearchPanel';
 import Icon from '@components/Icon';
+import { useSelector } from 'react-redux';
 
-const AsidePanel = ({ preview }) => {
+const AsidePanel = () => {
+    
+    const { preview } = useSelector(state => state?.weather?.entities);
     const { title, temp, date, weatherState, weatherStateAbbr } = preview;
-
     const [searchPanel, setSearchPanel] = useState(false);
-    const showSearchPanel = () => { setSearchPanel(!searchPanel) }
+    const showSearchPanel = () => { setSearchPanel(!searchPanel) };
 
     return (
         <>
@@ -34,7 +36,6 @@ const AsidePanel = ({ preview }) => {
                             <p className="weather--date">Today {date}</p>
                             <p className="weather--location"><span><img src={LocationIcon} /></span>{title}</p>
                         </div>
-
                     </div>
                 </div>
             </aside >

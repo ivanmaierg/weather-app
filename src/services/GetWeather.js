@@ -11,12 +11,11 @@ const getLocation = async (query) => {
 
 }
 
-const getWeatherWithCoords = async (woeid) => {
+const getWeatherWithId = async (woeid) => {
     const url = `http://localhost:8080/https://www.metaweather.com/api/location/${woeid}/`
     try {
         const response = await fetch(url);
         const data = await response.json()
-        console.log(data)
         return data
     } catch (err) {
         throw err
@@ -26,11 +25,11 @@ const getWeatherWithCoords = async (woeid) => {
 const getWeather = async (query) => {
     try {
         let data = await getLocation(query);
-        let weather = await getWeatherWithCoords(data[0].woeid);
+        let weather = await getWeatherWithId(data[0].woeid);
         return weather;
     } catch (err) {
         throw err
     }
 }
 
-export { getLocation, getWeatherWithCoords, getWeather };
+export { getLocation, getWeatherWithId, getWeather };

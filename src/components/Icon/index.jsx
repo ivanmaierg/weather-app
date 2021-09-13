@@ -2,7 +2,7 @@ import useDynamicSVGImport from '@/hooks/useDynamicImportSvg';
 import PropTypes from 'prop-types';
 import React from 'react'
 import brokenImage from '@icons/brokenImage.svg';
-const Icon = ({ name, onCompleted, onError, ...rest }) => {
+const Icon = ({ name = '', onCompleted, onError, ...rest }) => {
     const { error, loading, SvgIcon } = useDynamicSVGImport(name, {
         onCompleted,
         onError
@@ -20,7 +20,6 @@ const Icon = ({ name, onCompleted, onError, ...rest }) => {
 };
 
 Icon.propTypes = {
-    name: PropTypes.string.isRequired,
     width: PropTypes.string.isRequired,
     height: PropTypes.string,
 };

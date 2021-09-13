@@ -1,0 +1,33 @@
+.LocationsList__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.LocationsList__container li {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid transparent;
+}
+
+.LocationsList__container li:hover {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.746);
+    box-sizing: content-box;
+    cursor: pointer;
+}
+
+.LocationsList__container li p {
+    width: 90%;
+}
+
+.LocationsList__container li span {
+    visibility: hidden;
+}
+
+.LocationsList__container li:hover span{
+    visibility: visible;
+}
