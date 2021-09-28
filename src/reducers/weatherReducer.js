@@ -1,4 +1,4 @@
-import weatherMapping from '@/utils/mapping/weather';
+
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -11,7 +11,7 @@ const initialState = {
 
 export const weatherSlice = createSlice({
     name: 'weather',
-    initialState:initialState.entities.weather|| {},
+    initialState:initialState.entities.weather || {},
     reducers: {
         addWeather(state, action) {
             const weather = action.payload;
@@ -23,4 +23,4 @@ export const weatherSlice = createSlice({
 
 export const { addWeather } = weatherSlice.actions;
 
-export default weatherSlice.reducer
+export default weatherSlice.reducer;

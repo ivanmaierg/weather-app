@@ -10,12 +10,15 @@ import SearchPanel from '../SearchPanel';
 import Icon from '@components/Icon';
 import { useSelector } from 'react-redux';
 
+import { changeBaseOnUnit } from '@/utils/changBaseOnUnit';
+
 const AsidePanel = () => {
-    
     const { preview } = useSelector(state => state?.weather?.entities);
+    const unit = useSelector(state => state.unit.entities);
     const { title, temp, date, weatherState, weatherStateAbbr } = preview;
     const [searchPanel, setSearchPanel] = useState(false);
     const showSearchPanel = () => { setSearchPanel(!searchPanel) };
+    const [unitTemp] = changeBaseOnUnit([temp], unit);
 
     return (
         <>
@@ -30,7 +33,7 @@ const AsidePanel = () => {
                         <Icon name={weatherStateAbbr} width={'75%'} height={'75%'} style={{ margin: 'auto' }} alt={weatherState} />
                     </div>
                     <div className="left-panel__weather--info">
-                        <p className="weather--temperature">{temp}<span>°C</span></p>
+                        <p className="weather--temperature">{unitTemp}</p>
                         <p className="weather--status">{weatherState}</p>
                         <div className="weather--data">
                             <p className="weather--date">Today {date}</p>

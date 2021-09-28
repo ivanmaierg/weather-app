@@ -8,7 +8,6 @@ const initialState = {
         : {}
 };
 
-console.log('initialState', initialState)
 export const locationSlice = createSlice({
     name: 'location',
     initialState:initialState.entities.location || {},

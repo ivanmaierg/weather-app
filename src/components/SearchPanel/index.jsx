@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Button from '../Buttons/button'
 import './styles.css'
 import SearchIcon from '@icons/search.svg'
-import { useDispatch } from 'react-redux';
 import { getLocation } from '@/services/GetWeather';
 import LocationsList from '../LocationsList';
 
