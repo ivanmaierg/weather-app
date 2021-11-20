@@ -1,6 +1,11 @@
 
+let baseUrl = process.env.REACT_BASE_URL;
+
+
+
+console.log(baseUrl)
 const getLocation = async (query) => {
-    const url = `http://localhost:8080/https://www.metaweather.com/api/location/search/?query=${query}`
+    const url = `${baseUrl}/location/search/?query=${query}`
     try {
         const response = await fetch(url);
         const data = await response.json()
@@ -12,7 +17,7 @@ const getLocation = async (query) => {
 }
 
 const getLocationWithCoords = async (lat,long) => {
-    const url = `http://localhost:8080/https://www.metaweather.com/api/location/search/?lattlong=${lat},${long}`
+    const url = `${baseUrl}/location/search/?lattlong=${lat},${long}`
     try {
         const response = await fetch(url);
         const data = await response.json()
@@ -24,7 +29,7 @@ const getLocationWithCoords = async (lat,long) => {
 }
 
 const getWeatherWithId = async (woeid) => {
-    const url = `http://localhost:8080/https://www.metaweather.com/api/location/${woeid}/`
+    const url = `${baseUrl}/location/${woeid}/`
     try {
         const response = await fetch(url);
         const data = await response.json()
