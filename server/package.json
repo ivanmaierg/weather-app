@@ -1,0 +1,16 @@
+{
+  "name": "weather_app_server",
+  "version": "1.0.0",
+  "description": "weather_app_server",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+}

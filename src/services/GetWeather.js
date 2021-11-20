@@ -1,5 +1,5 @@
 
-let baseUrl = process.env.NODE_ENV === 'production' ? 'https://www.metaweather.com/api' : 'http://localhost:8080/https://www.metaweather.com/api'
+const baseUrl = 'http://localhost:8080/https://www.metaweather.com/api'
 
 
 const getLocation = async (query) => {

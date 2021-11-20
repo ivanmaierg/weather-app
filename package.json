@@ -20,10 +20,11 @@
   },
   "scripts": {
     "start": "node ./proxy/server.js & craco start",
+    "start-client":"node ./proxy/server.js & npm run build & (cd server && npm start)",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
-  },
+  },  
   "devDependencies": {
     "react-scripts": "latest"
   },
