@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.css';
-import PropTypes from 'prop-types';
 import Button from '@components/Buttons/button';
 
 const CallToAction = ({ visible, showSearchPanel }) => {

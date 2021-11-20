@@ -8,7 +8,6 @@ import { useSelector } from 'react-redux';
 
 const WeatherHighlights = () => {
     const {todayHighlights} = useSelector(state => state?.weather?.entities);
-    console.log(todayHighlights)
     const { airPressure,
         humidity,
         visibility,

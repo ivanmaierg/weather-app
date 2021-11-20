@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types';
 import CallToAction from '@components/Buttons/CallToAction';
 import GeoButton from '@components/Buttons/GeoButton';
-import weatherImg from '@icons/weatherImg.png';
 import './styles.css'
-import { getLocation } from '@/services/GetWeather';
 import LocationIcon from '@icons/location-icon-gray.svg'
 import SearchPanel from '../SearchPanel';
 import Icon from '@components/Icon';
@@ -17,7 +14,7 @@ const AsidePanel = () => {
     const unit = useSelector(state => state.unit.entities);
 
     const { title, temp, date, weatherState, weatherStateAbbr } = preview;
-   
+
 
     const [searchPanel, setSearchPanel] = useState(false);
     const [unitTemp] = changeBaseOnUnit([temp], unit);
