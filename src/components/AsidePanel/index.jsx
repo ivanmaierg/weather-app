@@ -15,10 +15,15 @@ import { changeBaseOnUnit } from '@/utils/changBaseOnUnit';
 const AsidePanel = () => {
     const { preview } = useSelector(state => state?.weather?.entities);
     const unit = useSelector(state => state.unit.entities);
+
     const { title, temp, date, weatherState, weatherStateAbbr } = preview;
+   
+
     const [searchPanel, setSearchPanel] = useState(false);
-    const showSearchPanel = () => { setSearchPanel(!searchPanel) };
     const [unitTemp] = changeBaseOnUnit([temp], unit);
+
+    const showSearchPanel = () => { setSearchPanel(!searchPanel) };
+
 
     return (
         <>

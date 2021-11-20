@@ -11,6 +11,18 @@ const getLocation = async (query) => {
 
 }
 
+const getLocationWithCoords = async (lat,long) => {
+    const url = `http://localhost:8080/https://www.metaweather.com/api/location/search/?lattlong=${lat},${long}`
+    try {
+        const response = await fetch(url);
+        const data = await response.json()
+        return data[0];
+    } catch (err) {
+        throw err
+    }
+
+}
+
 const getWeatherWithId = async (woeid) => {
     const url = `http://localhost:8080/https://www.metaweather.com/api/location/${woeid}/`
     try {
@@ -32,4 +44,4 @@ const getWeather = async (query) => {
     }
 }
 
-export { getLocation, getWeatherWithId, getWeather };
+export { getLocation, getWeatherWithId, getWeather, getLocationWithCoords};
