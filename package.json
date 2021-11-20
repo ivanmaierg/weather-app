@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^6.2.0",
+    "@craco/craco": "^5.9.0",
     "@reduxjs/toolkit": "^1.6.1",
     "classnames": "^2.3.1",
     "cors-anywhere": "^0.4.4",
@@ -20,15 +20,14 @@
   },
   "scripts": {
     "dev": "node ./proxy/server.js & craco start",
-    "start-client":"node ./proxy/server.js & npm run build & (cd server && npm start)",
+    "start-client": "node ./proxy/server.js & npm run build & (cd server && npm start)",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "heroku-postbuild": "node ./proxy/server.js & (cd server && npm start)"
-
-  },  
+  },
   "devDependencies": {
-    "react-scripts": "latest"
+    "react-scripts": "^3.4.4"
   },
   "browserslist": {
     "production": [
@@ -41,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
