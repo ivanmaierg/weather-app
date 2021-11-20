@@ -9,7 +9,7 @@ const initialState = {
 
 export const unitSlice = createSlice({
     name: 'unit',
-    initialState: initialState || {},
+    initialState: initialState,
     reducers: {
         changeUnit(state, action) {
             const unit = action.payload;

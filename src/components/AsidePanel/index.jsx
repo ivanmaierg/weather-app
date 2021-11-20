@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+
 import CallToAction from '@components/Buttons/CallToAction';
 import GeoButton from '@components/Buttons/GeoButton';
+
 import './styles.css'
 import LocationIcon from '@icons/location-icon-gray.svg'
 import SearchPanel from '../SearchPanel';

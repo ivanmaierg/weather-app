@@ -1,4 +1,5 @@
 
+import { locationInitial } from '@/initialState';
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -10,7 +11,7 @@ const initialState = {
 
 export const locationSlice = createSlice({
     name: 'location',
-    initialState:initialState.entities.location || {},
+    initialState:initialState.entities.location || locationInitial.location,
     reducers: {
         setLocation(state, action) {
             const location = action.payload;

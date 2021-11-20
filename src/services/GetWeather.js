@@ -1,9 +1,7 @@
 
-let baseUrl = process.env.REACT_BASE_URL;
+let baseUrl = process.env.NODE_ENV === 'production' ? 'https://www.metaweather.com/api' : 'http://localhost:8080/https://www.metaweather.com/api'
 
 
-
-console.log(baseUrl)
 const getLocation = async (query) => {
     const url = `${baseUrl}/location/search/?query=${query}`
     try {

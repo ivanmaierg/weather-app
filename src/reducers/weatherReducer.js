@@ -1,4 +1,5 @@
 
+import { weatherInitial } from '@/initialState';
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -9,9 +10,11 @@ const initialState = {
 };
 
 
+
+
 export const weatherSlice = createSlice({
     name: 'weather',
-    initialState:initialState.entities.weather || {},
+    initialState: initialState.entities.weather || weatherInitial.weather ,
     reducers: {
         addWeather(state, action) {
             const weather = action.payload;
