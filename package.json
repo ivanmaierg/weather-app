@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "node ./proxy/server.js & craco start",
     "start-client": "node ./proxy/server.js & npm run build & (cd server && npm start)",
-    "build": "craco build",
+    "build": "run build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "heroku-postbuild": "node ./proxy/server.js & (cd server && npm start)"
@@ -40,8 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "optionalDependencies": {
-    "fsevents": "^2.3.2"
   }
 }
