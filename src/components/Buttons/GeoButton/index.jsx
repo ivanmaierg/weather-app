@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.css';
 import Button from '@components/Buttons/button';
 import MyLocation from '@icons/location-icon-24.svg'
@@ -20,7 +20,7 @@ const GeoButton = (props) => {
   }
   return (
       <Button size="rounded" bgColor="gray" onClick={handleClickGeoLocation}>
-        <img style={{'margin':'auto'}}  src={MyLocation}></img>
+        <img style={{'margin':'auto'}} alt='geolocation' src={MyLocation}></img>
       </Button>
     );
 

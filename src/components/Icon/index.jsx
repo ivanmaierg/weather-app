@@ -8,7 +8,7 @@ const Icon = ({ name = '', onCompleted, onError, ...rest }) => {
         onError
     });
     if (error) {
-        return <img src={brokenImage} width={'100%'} height={'auto'} />;
+        return <img src={brokenImage} alt='Icon' width={'100%'} height={'auto'} />;
     }
     if (loading) {
         return "Loading...";

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import './style.css';
 import AsidePanel from './components/AsidePanel';
 import Main from './components/Main';
@@ -8,7 +8,6 @@ import WeekWeather from '@components/WeekWeather';
 import { getWeather, getWeatherWithId } from './services/GetWeather';
 import { addWeather } from './reducers/weatherReducer';
 import { useDispatch,useSelector } from 'react-redux';
-import { units } from './types/units.types';
 import TemperatureButtons from './components/TemperatureButtons';
 
 export default function App() {

@@ -41,7 +41,7 @@ const AsidePanel = () => {
                         <p className="weather--status">{weatherState}</p>
                         <div className="weather--data">
                             <p className="weather--date">Today {date}</p>
-                            <p className="weather--location"><span><img src={LocationIcon} /></span>{title}</p>
+                            <p className="weather--location"><span><img alt="location" src={LocationIcon} /></span>{title}</p>
                         </div>
                     </div>
                 </div>

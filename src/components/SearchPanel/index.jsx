@@ -24,7 +24,7 @@ const SearchPanel = ({ visible, showSearchPanel }) => {
             <button type="button" className="SearchPanel__button" onClick={() => showSearchPanel(!visible)}>x</button>
             <form onSubmit={onSubmit} className="SearchPanel__form">
                 <div className="SearchPanel__searchBar">
-                    <span ><img src={SearchIcon} /></span>
+                    <span ><img src={SearchIcon} alt="search"/></span>
                     <input type="text" placeholder="search location" name='location' value={formValue} onChange={handleInputChange}/>
                 </div>
                 <Button type="submit" bgColor='purple' size="small" fontSize='md'>Search</Button>
