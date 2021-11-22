@@ -20,11 +20,10 @@
   },
   "scripts": {
     "dev": "node ./proxy/server.js & craco start",
-    "start": "node ./proxy/server.js & (cd server && npm start)",
+    "start-client":"node ./proxy/server.js  & (cd server && npm start)",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "node ./proxy/server.js & (cd server && npm start)"
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
     "react-scripts": "^3.4.4"
